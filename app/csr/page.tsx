@@ -42,7 +42,7 @@ const  ClientSide = () => {
     useEffect(() =>{
       setloading(true);
       setInterval(() => {
-        <p>"Page is loading</p>
+        <p>Page is loading</p>
         setloading(false)
       }, 5000);
 
