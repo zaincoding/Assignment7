@@ -3,7 +3,6 @@
 import { title } from "process";
 import { useEffect,useState } from "react";
 
-import Image from 'next/image';
 
 
 interface interFa{
@@ -31,7 +30,6 @@ const  ClientSide = () => {
             const ParsedResponse: interFa[] = await response.json()
             setData(ParsedResponse)
 
-            console.log("Fetch Data", setData)
 
 
             
@@ -41,18 +39,18 @@ const  ClientSide = () => {
 
     useEffect(() =>{
       setloading(true);
-     const interval = setInterval(() => {
+      setInterval(() => {
         <p>"Page is loading</p>
         setloading(false)
       }, 5000);
-        return () => clearInterval(interval);
 
-    },[])
+
+    }, )
   return (
     <div >
         <p className="text-center text-[50px] font-bold text-[#206917]">Client Side Rendering</p>
 
-        {loading? (<p className="text-[25px] font-medium grid justify-center items-center">Wait Data is loading...</p>) : (
+        {loading? (<p className="text-[25px] font-medium grid justify-center items-center">&quot;Wait Data is loading...&quot;</p>) : (
 
         <div className="md:grid md:grid-cols-3  mx-auto gap-[70px] ml-[10px]">
         {data.map((Data) =>
@@ -60,7 +58,7 @@ const  ClientSide = () => {
             <p>ID: {Data.id}</p>
             <p className="text-[22px] ">Title: {Data.title}</p>
             <p className="text-[22px]  text-[#fc3a3a]">Price: {Data.price}</p>
-            <p><Image src={Data.image} alt={title} width={300} height={300}/></p>
+            <p><img src={Data.image} alt={title} width={300} height={300}/></p>
             <p>description: {Data.description}</p>
             <p>Category: {Data.category}</p>
             <p className="text-[#3356f0]">Rating: {Data.rating.rate} {Data.rating.count}</p>
