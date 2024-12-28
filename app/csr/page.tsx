@@ -41,12 +41,13 @@ const  ClientSide = () => {
 
     useEffect(() =>{
       setloading(true);
-      setInterval(() => {
+     const interval = setInterval(() => {
         <p>"Page is loading</p>
         setloading(false)
       }, 5000);
+        return () => clearInterval(interval);
 
-    })
+    },[])
   return (
     <div >
         <p className="text-center text-[50px] font-bold text-[#206917]">Client Side Rendering</p>
