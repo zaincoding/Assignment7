@@ -21,10 +21,10 @@ const Post = async() => {
     
     <div className="grid md:grid-cols-3 gap-5 justify-items-center text-center text-[22px] leading-10  mt-5">
         
-        {posts.map((info:any) => 
+        {posts.map((info, index) => 
         <div className="w-[350px] h-[200px] bg-slate-200 border border-black">
         <div className="mt-[10px]">
-        <p>UserId: {info.id}</p>
+        <p>UserId: {info.id || index}</p>
         <p>name: {info.name}</p>
         <p>Type: {info.type}</p>
         <p>Avaliable: {info.avaliable}</p>
