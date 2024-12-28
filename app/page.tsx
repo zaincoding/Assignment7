@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import site from './csr/page'
 
 
 
