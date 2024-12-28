@@ -1,5 +1,6 @@
 "use client"
 
+import Image from 'next/image'
 import { title } from "process";
 import { useEffect,useState } from "react"
 
@@ -56,7 +57,7 @@ const  ClientSide = () => {
             <p>ID: {Data.id}</p>
             <p className="text-[22px] ">Title: {Data.title}</p>
             <p className="text-[22px]  text-[#fc3a3a]">Price: {Data.price}</p>
-            <p><img src={Data.image} alt={title} className="w-[300px] h-[300px]"/></p>
+            <p><Image src={Data.image} alt={title} className="w-[300px] h-[300px]"/></p>
             <p>description: {Data.description}</p>
             <p>Category: {Data.category}</p>
             <p className="text-[#3356f0]">Rating: {Data.rating.rate} {Data.rating.count}</p>
