@@ -3,8 +3,8 @@
 
  async function PostData(){
 
-    let postData =  await fetch('https://simple-books-api.glitch.me/books/')
-    const ParsedData = await postData.json()
+    const storetData =  await fetch('https://simple-books-api.glitch.me/books/')
+    const ParsedData = await storetData.json()
 
     return( ParsedData)
 }
