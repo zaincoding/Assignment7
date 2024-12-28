@@ -12,7 +12,7 @@
 
 
 const Post = async() => {
-    let posts = await PostData()
+    const posts = await PostData()
 
     return (
     <div>
