@@ -1,6 +1,5 @@
-"use client"
+"use client";
 
-import { title } from "process";
 import { useEffect,useState } from "react";
 
 import Image from "next/image";
@@ -41,10 +40,7 @@ const  ClientSide = () => {
 
     useEffect(() =>{
       setloading(true);
-      setInterval(() => {
-        <p>Page is loading</p>
-        setloading(false)
-      }, 5000);
+      setTimeout(() => setloading(false), 5000);
 
 
     }, [])
@@ -60,7 +56,7 @@ const  ClientSide = () => {
             <p>ID: {Data.id || index}</p>
             <p className="text-[22px] ">Title: {Data.title}</p>
             <p className="text-[22px]  text-[#fc3a3a]">Price: {Data.price}</p>
-            <p><Image src={Data.image} alt={title} width={300} height={300}/></p>
+            <p><Image src={Data.image} alt="product image" width={300} height={300}/></p>
             <p>description: {Data.description}</p>
             <p>Category: {Data.category}</p>
             <p className="text-[#3356f0]">Rating: {Data.rating.rate} {Data.rating.count}</p>
