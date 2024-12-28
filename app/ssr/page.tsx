@@ -13,21 +13,21 @@
 
 const Post = async() => {
     let posts = await PostData()
-    console.log(posts)
-  return (
+
+    return (
     <div>
                 <h1 className="text-center md:text-[50px] text-[20px] font-bold text-[#206917]">Server Side Rendering</h1>
 
     
     <div className="grid md:grid-cols-3 gap-5 justify-items-center text-center text-[22px] leading-10  mt-5">
         
-        {posts.map((zain:any) => 
+        {posts.map((info:any) => 
         <div className="w-[350px] h-[200px] bg-slate-200 border border-black">
         <div className="mt-[10px]">
-        <p>UserId: {zain.id}</p>
-        <p>name: {zain.name}</p>
-        <p>Type: {zain.type}</p>
-        <p>Avaliable: {zain.avaliable}</p>
+        <p>UserId: {info.id}</p>
+        <p>name: {info.name}</p>
+        <p>Type: {info.type}</p>
+        <p>Avaliable: {info.avaliable}</p>
         </div>
         </div>
 
