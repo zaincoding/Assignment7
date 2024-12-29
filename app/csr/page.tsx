@@ -51,9 +51,9 @@ const  ClientSide = () => {
         {loading? (<p className="text-[25px] font-medium grid justify-center items-center">&quot;Wait Data is loading...&quot;</p>) : (
 
         <div className="md:grid md:grid-cols-3  mx-auto gap-[70px] ml-[10px]">
-        {data.map((Data, index) =>
-        <div className="border border-black  bg-slate-300 font-medium ">
-            <p>ID: {Data.id || index}</p>
+        {data.map((Data) =>
+        <div key={Data.id} className="border border-black  bg-slate-300 font-medium ">
+            <p>ID: {Data.id}</p>
             <p className="text-[22px] ">Title: {Data.title}</p>
             <p className="text-[22px]  text-[#fc3a3a]">Price: {Data.price}</p>
             <p><Image src={Data.image} alt="product image" width={300} height={300}/></p>
