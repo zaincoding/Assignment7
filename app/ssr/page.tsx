@@ -1,10 +1,15 @@
 
-
+interface product{
+  id:number;
+  name: string;
+  type: string;
+  avaliable: string;
+}
 
  async function PostData(){
 
     const storetData =  await fetch('https://simple-books-api.glitch.me/books/')
-    const ParsedData = await storetData.json()
+    const ParsedData:product[] = await storetData.json()
 
     return( ParsedData)
 }
@@ -23,8 +28,8 @@ const Post = async() => {
         
         {posts.map((info, index) => 
         <div className="w-[350px] h-[200px] bg-slate-200 border border-black">
-        <div className="mt-[10px]">
-        <p>UserId: {info.id || index}</p>
+        <div  key={index} className="mt-[10px]">
+        <p>UserId: {info.id}</p>
         <p>name: {info.name}</p>
         <p>Type: {info.type}</p>
         <p>Avaliable: {info.avaliable}</p>
