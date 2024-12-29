@@ -29,8 +29,10 @@ const  ClientSide = () => {
             const response =  await fetch('https://fakestoreapi.com/products')
 
             const ParsedResponse: interFa[] = await response.json()
-            setData(ParsedResponse)
 
+            console.log("Information",ParsedResponse)
+
+            setData(ParsedResponse)
 
 
             
@@ -56,7 +58,7 @@ const  ClientSide = () => {
             <p>ID: {Data.id}</p>
             <p className="text-[22px] ">Title: {Data.title}</p>
             <p className="text-[22px]  text-[#fc3a3a]">Price: {Data.price}</p>
-            <p><Image src={Data.image} alt="product image" width={300} height={300}/></p>
+            <p><Image src={Data.image} alt="product image" width={100} height={100}/></p>
             <p>description: {Data.description}</p>
             <p>Category: {Data.category}</p>
             <p className="text-[#3356f0]">Rating: {Data.rating.rate} {Data.rating.count}</p>
