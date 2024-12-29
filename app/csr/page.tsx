@@ -27,10 +27,11 @@ const  ClientSide = () => {
     useEffect(() =>{
         async function getData(){
             const response =  await fetch('https://fakestoreapi.com/products')
+            console.log("Information",response)
+
 
             const ParsedResponse: interFa[] = await response.json()
 
-            console.log("Information",ParsedResponse)
 
             setData(ParsedResponse)
 
@@ -45,7 +46,7 @@ const  ClientSide = () => {
       setTimeout(() => setloading(false), 5000);
 
 
-    }, [])
+    },)
   return (
     <div >
         <p className="text-center text-[50px] font-bold text-[#206917]">Client Side Rendering</p>
